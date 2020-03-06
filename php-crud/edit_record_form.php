@@ -31,9 +31,9 @@ $statement->closeCursor();
             <input type="category_id" name="category_id"
                    value="<?php echo $record['categoryID']; ?>">
             <br>
-            <label>Code:</label>
-            <input type="input" name="code"
-                   value="<?php echo $record['code']; ?>">
+            <label>caliber:</label>
+            <input type="input" name="caliber"
+                   value="<?php echo $record['caliber']; ?>">
             <br>
             <label>Name:</label>
             <input type="input" name="name"
