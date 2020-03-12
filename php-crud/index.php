@@ -40,14 +40,15 @@ $statement3->closeCursor();
 <!-- the head section -->
 <head>
 <title>PHP CRUD</title>
-<link rel="stylesheet" type="text/css" href="sass/main.css">
+<link rel="stylesheet" type="text/css" href="./sass/main.css">
 <link rel="stylesheet" type="cdn" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <!-- the body section -->
 <body>
-<header><h1>PHP CRUD</h1></header>
+
+<header><img id = "header-img" src="./image_uploads/logo.png" alt="Tarkov Logo" height="42" width="42"></header>
 <main>
-<h1>Record List</h1>
+<h1>Ammunition List</h1>
 <aside>
 <!-- display a list of categories in the sidebar-->
 <h2>Categories</h2>
