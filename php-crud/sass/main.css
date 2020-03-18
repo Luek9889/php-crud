@@ -1,11 +1,13 @@
 /* the styles for the html elements */
+html {
+  background-color: #9a8866;
+}
+
 body {
   margin-top: 0;
   font-family: Arial, Helvetica, sans-serif;
   width: 1000px;
   margin: 0 auto;
-  background-color: grey;
-  border: 1px solid grey;
   padding: .5em 2em;
 }
 
@@ -27,6 +29,7 @@ header h1 {
 
 main {
   margin: 0;
+  background: rgba(128, 128, 128, 0.8);
 }
 
 aside {
@@ -47,18 +50,6 @@ section {
   float: left;
   width: 800PX;
   padding-bottom: 1.5em;
-}
-
-footer {
-  clear: both;
-  margin-top: 1em;
-  border-top: 2px solid black;
-}
-
-footer p {
-  text-align: right;
-  font-size: 80%;
-  margin: 1em 0;
 }
 
 h1 {
@@ -85,35 +76,6 @@ ul {
 li {
   margin: 0;
   padding: 0;
-}
-
-a {
-  color: #29407c;
-  font-weight: bold;
-}
-
-a:hover {
-  color: #d08504;
-}
-
-table {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
-td, th {
-  border: 1px dashed black;
-  padding: .2em .5em .2em .5em;
-  vertical-align: top;
-  text-align: left;
-}
-
-form {
-  margin: 0;
-}
-
-br {
-  clear: left;
 }
 
 /* the styles for classes */
@@ -153,10 +115,52 @@ br {
 
 /* Css for colors */
 html {
-  background-color: grey;
+  background-image: url("tLogo.jpg");
+}
+
+a {
+  color: #02040c;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #d08504;
 }
 
 body {
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.8);
+  border: 1px solid grey;
+}
+
+footer {
+  clear: both;
+  margin-top: 1em;
+  border-top: 2px solid black;
+}
+
+footer p {
+  text-align: right;
+  font-size: 80%;
+  margin: 1em 0;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px dashed black;
+  padding: .2em .5em .2em .5em;
+  vertical-align: top;
+  text-align: left;
+}
+
+form {
+  margin: 0;
+}
+
+br {
+  clear: left;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,10 +1,23 @@
 /* Css for colors */
+$aColor : rgb(2, 4, 12);
+$hover_color : rgb(208, 133, 4);
+$bg_color:rgba(128, 128, 128, 0.8);
 html {
-    background-color: grey;
+    background-image: url("tLogo.jpg");
+ 
+
+}
+a {
+    color: $aColor;
+    font-weight: bold;
+}
+a:hover {
+    color: $hover_color;
 }
 body {
 
-    background-color: grey;
- 
+    
+    background-color: $bg_color;
+    border: 1px solid grey;
 
 }

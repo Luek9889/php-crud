@@ -26,14 +26,27 @@ $statement2->execute();
 $categories = $statement2->fetchAll();
 $statement2->closeCursor();
 // Get records for selected category
-$queryRecords = "SELECT * FROM records
-WHERE categoryID = :category_id
-ORDER BY recordID";
-$statement3 = $db->prepare($queryRecords);
-$statement3->bindValue(':category_id', $category_id);
-$statement3->execute();
-$records = $statement3->fetchAll();
-$statement3->closeCursor();
+if($category_id != 3)
+{
+    $queryRecords = "SELECT * FROM records
+    WHERE categoryID = :category_id
+    ORDER BY recordID";
+    $statement3 = $db->prepare($queryRecords);
+    $statement3->bindValue(':category_id', $category_id);
+    $statement3->execute();
+    $records = $statement3->fetchAll();
+    $statement3->closeCursor();
+}
+else{
+    $queryRecords = "SELECT * FROM gun
+    WHERE categoryID = :category_id
+    ORDER BY recordID";
+    $statement3 = $db->prepare($queryRecords);
+    $statement3->bindValue(':category_id', $category_id);
+    $statement3->execute();
+    $records = $statement3->fetchAll();
+    $statement3->closeCursor();
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -80,7 +93,7 @@ $statement3->closeCursor();
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
 <td><?php echo $record['name']; ?></td>
 <td><?php echo $record['caliber']; ?></td>
-<td><?php echo $record['price']; ?></td>
+<td><?php if($category_id != 3){echo $record['price'];}else{echo $record['seller'];} ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"
@@ -105,7 +118,7 @@ value="<?php echo $record['categoryID']; ?>">
 </section>
 </main>
 <footer>
-<p>&copy; <?php echo date("Y"); ?> PHP CRUD, Inc.</p>
+<p>&copy; <?php echo date("Y"); ?> Luke Pearson, Inc.</p>
 </footer>
 </body>
 </html>
